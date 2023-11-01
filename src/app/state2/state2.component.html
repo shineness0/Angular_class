@@ -1,0 +1,9 @@
+<div class="text-center text-primary mt-3" *ngIf="foodArray.name">
+    <input type="text" class="form-control my-2" value={{foodArray.name}} [(ngModel)]="foodArray.name">
+    <h6 class="text-uppercase fw-bold">Details about {{foodArray.name}}</h6>
+    <p>NAME OF ITEM: {{foodArray.name}}</p>
+    <p>PRICE: {{foodArray.price}}</p>
+    <p>QUANTITY: {{foodArray.quantity}}</p>
+    <p>CATEGORY: {{foodArray.category}}</p>
+    <p>AVAILABILITY: {{foodArray.availability}}</p>
+</div>

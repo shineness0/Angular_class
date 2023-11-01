@@ -1,0 +1,11 @@
+<p>display-api works!</p>
+<button (click)="getApiBtn()">Get API</button>
+<section >
+    <div class="">
+        <div class="col-lg-3 shadow text-center" *ngFor="let item of apiArray">
+            <p>{{item.id}}</p>
+            <p>{{item.name}}</p>
+            <p>{{item.email}}</p>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,9 @@
+<p>state1 works</p>
+<div class="container">
+    <div class="row shadow" *ngFor="let item of foodItems">
+       <p class="text-center text-success btn"  (click)="sendItem(item)">{{item.name}}</p>
+    </div>
+    <div class="row shadow">
+        <app-state2></app-state2>
+    </div>
+</div>

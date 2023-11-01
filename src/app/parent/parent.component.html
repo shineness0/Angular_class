@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row shadow bg-light">
+    <p>parent works!</p>
+    <div class="col-8 mx-auto">
+      <input
+        type="text"
+        class="form-control my-2"
+        [(ngModel)]="post"
+        (input)="onInputChange($event)"
+      />
+    </div>
+  </div>
+  <div class="row shadow bg-light">
+    <div class="col-8 mx-auto"></div>
+    <app-child
+      [sendPost]="post"
+      (commentEmitter)="recieveComment($event)"
+    ></app-child>
+  </div>
+</div>

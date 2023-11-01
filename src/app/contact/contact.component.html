@@ -1,0 +1,68 @@
+<section class="row">
+   <div class="col-lg-6 shadow p-4">
+    <form>
+        <h4 class="text-center fs-3">Contact Us</h4>
+        <div class="mb-4 row">
+            <div class="col-lg">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" id="firstName" name="firstName" class="form-control"  [(ngModel)]="firstname"/>
+            </div>
+            <div class="col-lg">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" id="lastName" name="lastName" class="form-control"   [(ngModel)]="lastname"/>
+            </div>
+        </div>
+    
+        <div class="mb-4">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-control"   [(ngModel)]="email"/>
+        </div>
+    
+        <div class="mb-4">
+            <label for="phoneNumber" class="form-label">Phone Number</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control"   [(ngModel)]="phone"/>
+        </div>
+    
+        <div class="mb-4">
+            <label for="address" class="form-label">Address</label>
+            <textarea class="form-control" id="address" name="address" rows="4"  [(ngModel)]="address"></textarea>
+        </div>
+    
+        <button type="submit" class="btn btn-primary btn-block mb-4" (click)="contactBtn()">Submit</button>
+    </form>
+   </div>
+
+    <div class="col-lg-6">
+        <div class="d-flex gap-5" *ngFor="let contact of contactArray, let idx=index">
+            <div>{{contact.firstName}}</div>
+            <button routerLink="{{idx}}" class="btn btn-info">View</button>
+            <button class="btn btn-success" (click)="editContact()">Edit</button>
+            <button class="btn btn-danger" (click)="deleteContact(idx)">Delete</button>
+        </div>
+    </div>
+</section>
+
+
+<!-- <table class="table table-hover table-striped" *ngIf="contactArray.length>0">
+<tr class="text-uppercase">
+<th>S/N</th>
+<th>first name</th>
+<th>last name</th>
+<th>email</th>
+<th>phone number</th>
+<th>address</th>
+<th>Action</th>
+</tr>
+<tr *ngFor="let contact of contactArray, let id=index">
+<td>{{id+ 1}}</td>
+<td>{{contact.firstName}}</td>
+<td>{{contact.lastName}}</td>
+<td>{{contact.email}}</td>
+<td>{{contact.phone}}</td>
+<td>{{contact.address}}</td>
+  <td>
+    <button class="btn btn-warning">Edit</button>
+    <button class="btn btn-danger">Delete</button>
+  </td>
+</tr>
+</table> -->
