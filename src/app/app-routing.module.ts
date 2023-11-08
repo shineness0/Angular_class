@@ -14,12 +14,16 @@ import { SignupComponent } from './signup/signup.component';
 import { State1Component } from './state1/state1.component';
 import { State2Component } from './state2/state2.component';
 import { ParentComponent } from './parent/parent.component';
+import { TestComponent } from './test/test.component';
+import { ChildComponent } from './child/child.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
   {path: 'apii', component:DisplayApiComponent },
+  {path: 'test', component:TestComponent },
   {path: 'parent', component:ParentComponent },
+  {path: 'child', component:ChildComponent },
   {path: 'signup', component:SignupComponent },
   {path: 'pipe', component:PipeComponent },
   {path: 'login', component:LoginComponent },

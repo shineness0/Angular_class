@@ -19,6 +19,7 @@ import { State1Component } from './state1/state1.component';
 import { State2Component } from './state2/state2.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { TestComponent } from './test/test.component';
 @NgModule({
   declarations: 
   [
@@ -36,7 +37,8 @@ import { ChildComponent } from './child/child.component';
     State1Component,
     State2Component,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
