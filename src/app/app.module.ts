@@ -20,6 +20,8 @@ import { State2Component } from './state2/state2.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { TestComponent } from './test/test.component';
+import { ParentMsgComponent } from './parent-msg/parent-msg.component';
+import { ChildMsgComponent } from './child-msg/child-msg.component';
 @NgModule({
   declarations: 
   [
@@ -38,7 +40,9 @@ import { TestComponent } from './test/test.component';
     State2Component,
     ParentComponent,
     ChildComponent,
-    TestComponent
+    TestComponent,
+    ParentMsgComponent,
+    ChildMsgComponent
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,8 @@ import { State2Component } from './state2/state2.component';
 import { ParentComponent } from './parent/parent.component';
 import { TestComponent } from './test/test.component';
 import { ChildComponent } from './child/child.component';
+import { ChildMsgComponent } from './child-msg/child-msg.component';
+import { ParentMsgComponent } from './parent-msg/parent-msg.component';
 
 
 const routes: Routes = [
@@ -23,6 +25,8 @@ const routes: Routes = [
   {path: 'apii', component:DisplayApiComponent },
   {path: 'test', component:TestComponent },
   {path: 'parent', component:ParentComponent },
+  {path: 'parent_msg', component:ParentMsgComponent },
+  {path: 'child_msg', component:ChildMsgComponent },
   {path: 'child', component:ChildComponent },
   {path: 'signup', component:SignupComponent },
   {path: 'pipe', component:PipeComponent },

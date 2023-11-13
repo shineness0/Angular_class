@@ -1,0 +1,11 @@
+<div class="col-md-6">
+  <div class="group">
+    <div class="form-group mb-4">
+      <label>Message From Child</label>
+      <input type="text" class="form-control" [(ngModel)]="msg" />
+    </div>
+    <div class="btn btn-primary" (click)="sendMsg()">Submit</div>
+  </div>
+  <p>Message From Parent: {{ parentMsg }}</p>
+  <p>Message From Child: {{ childMsg }}</p>
+</div>

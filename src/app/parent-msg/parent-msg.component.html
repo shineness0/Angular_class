@@ -1,0 +1,17 @@
+<div class="container px-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="group mb-4">
+        <div class="form-group mb-4">
+          <label>Message From Parent</label>
+          <input type="text" class="form-control" [(ngModel)]="parentMsg" />
+        </div>
+        <div class="btn btn-primary" (click)="sendMsg()">Submit</div>
+      </div>
+    </div>
+    <app-child-msg
+      [parentMsg]="parentMsg"
+      (childMsgEmitter)="($event)"
+    ></app-child-msg>
+  </div>
+</div>
