@@ -18,6 +18,6 @@ export class StateService {
     price: 0,
     quantity: 0,
     category: '',
-    availability: '',
+    availability: ''
   })
 }

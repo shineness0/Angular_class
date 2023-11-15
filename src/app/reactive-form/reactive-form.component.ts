@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
+import { BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-reactive-form',
@@ -10,20 +11,21 @@ export class ReactiveFormComponent {
   constructor(public formBuilder: FormBuilder){}
 
   public forms = this.formBuilder.group({
-    firstName: [''],
-    lastName: [''],
-    email: [''],
-    age: [''],
-    password: [''],
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    age: ['', Validators.required],
+    password: ['', Validators.required],
   })
-
-  
   
     firstName = ''
     lastName = ''
     email = ''
     age = ''
     password =''
+
+    behaviorSubject = new BehaviorSubject<{}>(this.forms);
+
   
 
   onSubmit() {
@@ -31,6 +33,10 @@ export class ReactiveFormComponent {
 
     this.forms.controls['email'].setValue('')
     this.forms.controls['age'].setValue('')
+  }
+
+  sendUser() {
+    
   }
 
 }
