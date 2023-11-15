@@ -18,11 +18,13 @@ import { TestComponent } from './test/test.component';
 import { ChildComponent } from './child/child.component';
 import { ChildMsgComponent } from './child-msg/child-msg.component';
 import { ParentMsgComponent } from './parent-msg/parent-msg.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
   {path: 'apii', component:DisplayApiComponent },
+  {path: 'reactive_form', component:ReactiveFormComponent },
   {path: 'test', component:TestComponent },
   {path: 'parent', component:ParentComponent },
   {path: 'parent_msg', component:ParentMsgComponent },

@@ -7,7 +7,7 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DisplayContactComponent } from './display-contact/display-contact.component';
 import { EditContactComponent } from './edit-contact/edit-contact.component';
 import { AdminComponent } from './admin/admin.component';
@@ -22,6 +22,7 @@ import { ChildComponent } from './child/child.component';
 import { TestComponent } from './test/test.component';
 import { ParentMsgComponent } from './parent-msg/parent-msg.component';
 import { ChildMsgComponent } from './child-msg/child-msg.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 @NgModule({
   declarations: 
   [
@@ -42,13 +43,15 @@ import { ChildMsgComponent } from './child-msg/child-msg.component';
     ChildComponent,
     TestComponent,
     ParentMsgComponent,
-    ChildMsgComponent
+    ChildMsgComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
